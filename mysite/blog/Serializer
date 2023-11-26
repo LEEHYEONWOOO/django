@@ -1,0 +1,10 @@
+from rest_framework import serializers
+from .models import Board1
+
+class ArticleSerializer(serializers.Serializer):
+    title = serializers.CharField()
+    content = serializers.TextField()
+
+serializer = ArticleSerializer(Board1)
+
+print(serializer)
